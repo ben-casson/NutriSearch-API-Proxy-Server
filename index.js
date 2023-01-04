@@ -14,5 +14,4 @@ app.use('/food-list', require('./routes/foodList'))
 app.use('/food-item', require('./routes/foodItem'))
 
 
-
 app.listen(PORT, () => console.log(`Server listening on port ${PORT}`));
