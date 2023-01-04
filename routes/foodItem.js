@@ -9,15 +9,16 @@ const API_KEY_NAME = process.env.API_KEY_NAME;
 const API_KEY_VALUE = process.env.API_KEY_VALUE;
 
 router.get('/', async (req, res) => {
-    // const params = new URLSearchParams({
-    //     ...url.parse(req.url, true).query
-    //     [API_KEY_NAME]: API_KEY_VALUE,
-    // });
-
-    let query = url.parse(req.url, true).query;
+    const params = new URLSearchParams({
+        ...url.parse(req.url, true).query,
+    });
+    console.log(params)
 
     try {
-        const apiRes = await needle('get', `${API_FOOD_BASE_URL}${query}?${API_KEY_NAME}=${API_KEY_VALUE}`);
+        const apiRes = await needle(
+            'get',
+            `${API_FOOD_BASE_URL}/${params}?${API_KEY_NAME}=${API_KEY_VALUE}`
+        );
         const data = apiRes.body;
 
         res.status(200).json(data);
