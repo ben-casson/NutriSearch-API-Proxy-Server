@@ -10,7 +10,8 @@ const app = express();
 app.use(cors());
 
 //Routes
-app.use('/api', require('./routes/foodList'))
+app.use('/food-list', require('./routes/foodList'))
+app.use('/food', require('./routes/food'))
 
 
 
