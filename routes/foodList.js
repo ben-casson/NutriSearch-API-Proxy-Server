@@ -8,7 +8,7 @@ const API_FOOD_LIST_BASE_URL = process.env.API_FOOD_LIST_BASE_URL;
 const API_KEY_NAME = process.env.API_KEY_NAME;
 const API_KEY_VALUE = process.env.API_KEY_VALUE;
 
-router.get('/food-list', async (req, res) => {
+router.get('/', async (req, res) => {
     const params = new URLSearchParams({
         [API_KEY_NAME]: API_KEY_VALUE,
         ...url.parse(req.url, true).query

@@ -10,12 +10,12 @@ const API_KEY_VALUE = process.env.API_KEY_VALUE;
 
 let id = '454004';
 
-router.post('/food-item', (req, res) => {
+router.post('/', (req, res) => {
     id = req.body.id; // your implementation here
     res.send('Saved!');
 });
 
-router.get('/food-item', async (req, res) => {
+router.get('/', async (req, res) => {
     const params = new URLSearchParams({
         // ...url.parse(req.url, true).search,
         [API_KEY_NAME]: API_KEY_VALUE,
