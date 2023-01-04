@@ -1,0 +1,29 @@
+{
+  "name": "nutrisearch-api-proxy-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "dev": "nodemon index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ben-casson/NutriSearch-API-Proxy-Server.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ben-casson/NutriSearch-API-Proxy-Server/issues"
+  },
+  "homepage": "https://github.com/ben-casson/NutriSearch-API-Proxy-Server#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "needle": "^3.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
