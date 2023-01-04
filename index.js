@@ -11,7 +11,7 @@ app.use(cors());
 
 //Routes
 app.use('/food-list', require('./routes/foodList'))
-app.use('/food', require('./routes/food'))
+app.use('/food-item', require('./routes/foodItem'))
 
 
 
