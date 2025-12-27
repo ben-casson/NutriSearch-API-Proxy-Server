@@ -21,5 +21,6 @@ app.use(cors());
 //Routes
 app.use('/food-list', require('./routes/foodList'));
 app.use('/food-item', require('./routes/foodItem'));
+app.use('/wiki-article-practice', require('./routes/wikiArticlePractice'));
 
 app.listen(PORT, () => console.log(`Server listening on port ${PORT}`));
