@@ -35,7 +35,10 @@ router.get('/', cache('1 day'), async (req, res) => {
     });
         const data = apiRes.body;
 
-        res.status(200).json(data);
+        // res.status(200).json(data);
+        res.set("Content-Type", "text/html; charset=utf-8");
+        res.status(200).send(data);
+
     } catch (error) {
         res.status(500).json({ error });
         console.log("THE ERROR -> ")
