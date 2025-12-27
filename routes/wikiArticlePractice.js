@@ -22,7 +22,7 @@ router.get('/', cache('1 day'), async (req, res) => {
         return res.status(400).json({ error: "Missing query parameter" });
     }
 
-    const encodedTitle = encodeURIComponent(query.replaceAll(" ", "_"));
+    const encodedTitle = encodeURIComponent(query);
     const url = `${WIKI_API_BASE_URL}/${encodedTitle}/html`;
 
     try {
