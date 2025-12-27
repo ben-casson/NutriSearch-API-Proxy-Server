@@ -16,7 +16,7 @@ router.get('/', cache('1 day'), async (req, res) => {
     //     // [API_KEY_NAME]: API_KEY_VALUE,
     //     ...url.parse(req.url, true).query
     // });
-    const { query } = req.query.query;
+    const query = req.query.query;
 
     if (!query) {
         return res.status(400).json({ error: "Missing query parameter" });
